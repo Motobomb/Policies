@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Fotobomb Terms & Conditions governing your use of the Fotobomb app." />
+    <meta name="description" content="Motobomb Terms & Conditions governing your use of the Motobomb app." />
     <title>Terms &amp; Conditions</title>
     <style>
         :root{
@@ -55,7 +55,27 @@
           background:rgba(255,255,255,.08); border:1px solid var(--stroke);
           color:var(--muted); font-size:.9rem;
         }
-        @media (prefers-reduced-motion: reduce){ .btn{transition:none} }
+        .chip{
+          display:inline-block; padding:3px 10px; border-radius:999px;
+          background:rgba(255,255,255,.10); border:1px solid var(--stroke);
+          font-size:.88rem; margin:2px 2px;
+        }
+        .badge-pro{
+          display:inline-block; padding:2px 8px; border-radius:999px;
+          background:rgba(220,30,30,.22); border:1px solid rgba(220,30,30,.5);
+          color:#fca5a5; font-size:.8rem; font-weight:600;
+          margin-left:6px; vertical-align:middle;
+        }
+        .badge-free{
+          display:inline-block; padding:2px 8px; border-radius:999px;
+          background:rgba(255,255,255,.10); border:1px solid var(--stroke);
+          color:var(--muted); font-size:.8rem; font-weight:600;
+          margin-left:6px; vertical-align:middle;
+        }
+        .row{display:flex;gap:14px;align-items:center;margin:12px 0}
+        .row img{width:44px;height:auto;border-radius:8px;border:1px solid var(--stroke)}
+        .row p{margin:0;color:var(--muted)}
+        @media (prefers-reduced-motion: reduce){ *{transition:none} }
     </style>
     <meta name="theme-color" content="#121212">
 </head>
@@ -64,19 +84,19 @@
     <header>
         <h1 class="page-title">Terms &amp; Conditions</h1>
         <p class="lead">
-            These Terms govern your use of the Fotobomb mobile application and related services (the "Service").
+            These Terms govern your use of the Motobomb mobile application and related services, the "Service".
             By creating an account or using the Service, you agree to these Terms.
         </p>
-        <p class="meta">Effective: 29 March 2026 • Version 2.0</p>
+        <p class="meta">Effective: 9 Feb 2026 • Version 2.0</p>
     </header>
 
     <section class="card">
         <h2>Who We Are</h2>
         <p>
-            Fotobomb is operated from Wales, United Kingdom. At present, Fotobomb is not operated by an incorporated/registered company.
-            References to "we", "us" or "our" mean the Fotobomb operator(s).
+            Motobomb is operated from Wales, United Kingdom. At present, Motobomb is not operated by an incorporated/registered company.
+            References to "we", "us" or "our" mean the Motobomb operator(s).
         </p>
-        <p class="meta">Contact: use the in-app support section (Fotobombadvertising@gmail.com).</p>
+        <p class="meta">Contact: use the in-app support section or email contact.motobomb@gmail.com.</p>
     </section>
 
     <section class="card">
@@ -113,7 +133,7 @@
     <section class="card">
         <h2>No Emergency or Safety-Critical Use</h2>
         <p>
-            Fotobomb is not designed for emergency response, safety-critical use, or precise navigation.
+            Motobomb is not designed for emergency response, safety-critical use, or precise navigation.
             Do not rely on the Service for time-critical routing or life-safety decisions.
             In an emergency, call the appropriate emergency services.
         </p>
@@ -122,10 +142,10 @@
     <section class="card">
         <h2>Location, Permissions &amp; Notifications</h2>
         <ul>
-            <li>Some features require access to device permissions (such as location and notifications). You can grant or revoke permissions at any time in device settings.</li>
-            <li>If you enable location sharing (for example, as a Pro Photographer), you understand that sharing a location can create privacy and safety risks.</li>
+            <li>Some features require access to device permissions, such as location and notifications. You can grant or revoke permissions at any time in device settings.</li>
+            <li>If you enable location sharing, for example as a Pro Photographer, you understand that sharing a location can create privacy and safety risks.</li>
             <li>Location sharing is automatically disabled after 8 hours as a safeguard. You will receive reminder notifications while sharing is active. You can stop sharing at any time from the map screen.</li>
-            <li>Notifications may be used for service alerts and updates (and only for marketing where you have consented, if applicable).</li>
+            <li>Notifications may be used for service alerts and updates, and only for marketing where you have consented if applicable.</li>
         </ul>
     </section>
 
@@ -140,12 +160,12 @@
     </section>
 
     <section class="card">
-        <h2>Fotobombs Log</h2>
+        <h2>Motobombs Log</h2>
         <p>
-            The Fotobomb log allows users to record passes by roadside photographers. By logging a Fotobomb, you acknowledge that:
+            The Motobomb log allows users to record passes by roadside photographers. By logging a Motobomb, you acknowledge that:
         </p>
         <ul>
-            <li>You are recording information about a third party (the photographer). You should only log accurate information.</li>
+            <li>You are recording information about a third party, the photographer. You should only log accurate information.</li>
             <li>You must not use the log to harass, track, or intimidate any individual.</li>
             <li>We may remove log entries that are reported as inaccurate, abusive, or that breach these Terms.</li>
         </ul>
@@ -154,14 +174,14 @@
     <section class="card">
         <h2>Content You Upload (Licence)</h2>
         <p>
-            You keep ownership of the photos, text, and media you upload ("Content").
-            By submitting Content, you grant Fotobomb a non-exclusive, worldwide, royalty-free licence to host, store, reproduce,
-            adapt (e.g., resize/crop/compress), distribute, and publicly display your Content for the purposes of operating,
-            improving, and promoting the Service (including within the app, on the website, and on official Fotobomb social channels).
+            You keep ownership of the photos, text, and media you upload, "Content".
+            By submitting Content, you grant Motobomb a non-exclusive, worldwide, royalty-free licence to host, store, reproduce,
+            adapt, including resize/crop/compress, distribute, and publicly display your Content for the purposes of operating,
+            improving, and promoting the Service, including within the app, on the website, and on official Motobomb social channels.
         </p>
         <ul>
             <li>Where reasonably practical, we may attribute Content to your display name/handle.</li>
-            <li>We may create technical or promotional variants (resized/reformatted) as needed.</li>
+            <li>We may create technical or promotional variants, resized/reformatted, as needed.</li>
             <li>We will not sell your photos to third parties outside the uses described above without a separate agreement.</li>
         </ul>
 
@@ -174,8 +194,8 @@
 
         <h3>Removal &amp; backups</h3>
         <ul>
-            <li>If you delete Content (or request deletion), we will stop using it for new uses within a reasonable period.</li>
-            <li>Residual copies may remain temporarily in caches, backups, or where content has already been shared publicly (e.g., a prior social post), to the extent permitted by law.</li>
+            <li>If you delete Content or request deletion, we will stop using it for new uses within a reasonable period.</li>
+            <li>Residual copies may remain temporarily in caches, backups, or where content has already been shared publicly, such as a prior social post, to the extent permitted by law.</li>
         </ul>
         <p class="meta">Need a takedown or uploaded by mistake? Contact us via the in-app support section.</p>
     </section>
@@ -184,8 +204,8 @@
         <h2>Real-World Interactions &amp; Assumption of Risk</h2>
         <p>
             The Service helps users discover locations and user-generated listings. Travel, photography, meeting other users,
-            and visiting locations carry inherent risks (including road hazards, weather, access restrictions, trespass, confrontation,
-            nuisance, and property issues).
+            and visiting locations carry inherent risks, including road hazards, weather, access restrictions, trespass, confrontation,
+            nuisance, and property issues.
         </p>
         <ul>
             <li>You are solely responsible for verifying safety, legality, access rights, and suitability before visiting a location or meeting anyone.</li>
@@ -196,9 +216,9 @@
     <section class="card">
         <h2>Legal Compliance (Photography, Privacy &amp; Drones)</h2>
         <ul>
-            <li>You are responsible for complying with laws and rules that apply to your activities (including local byelaws, venue rules, signage, and any required permissions).</li>
-            <li>You must respect privacy, publicity, and data-protection laws (including UK GDPR / Data Protection Act 2018) when capturing or sharing images.</li>
-            <li>If using drones, you must comply with applicable aviation rules (e.g., UK CAA regulations) and local restrictions.</li>
+            <li>You are responsible for complying with laws and rules that apply to your activities, including local byelaws, venue rules, signage, and any required permissions.</li>
+            <li>You must respect privacy, publicity, and data-protection laws, including UK GDPR and Data Protection Act 2018, when capturing or sharing images.</li>
+            <li>If using drones, you must comply with applicable aviation rules, such as UK CAA regulations, and local restrictions.</li>
         </ul>
     </section>
 
@@ -221,7 +241,7 @@
             Account deletion will:
         </p>
         <ul>
-            <li>Cancel any active photographer subscription — it will not renew. You will not be charged again, but no refund is issued for the remainder of the current billing period (subject to Google Play's refund policies).</li>
+            <li>Cancel any active photographer subscription — it will not renew. You will not be charged again, but no refund is issued for the remainder of the current billing period, subject to Google Play's refund policies.</li>
             <li>Permanently delete your public profile, portfolio photos, and all associated Firestore and Storage data.</li>
             <li>Remove your Firebase Authentication account and Google sign-in link.</li>
         </ul>
@@ -241,7 +261,7 @@
     <section class="card">
         <h2>Third-Party Services &amp; Links</h2>
         <p>
-            The Service may integrate or link to third-party services (such as Google Maps, Firebase, Google Play Billing, and AdMob).
+            The Service may integrate or link to third-party services, such as Google Maps, Firebase, Google Play Billing, and AdMob.
             We do not control third-party services and are not responsible for their availability, accuracy, security, or terms.
             Your use of third-party services is at your own risk and subject to those providers' terms and privacy policies.
         </p>
@@ -250,7 +270,7 @@
     <section class="card">
         <h2>Our Intellectual Property</h2>
         <p>
-            The Service (including app design, branding, software, databases, and features) is owned by or licensed to Fotobomb.
+            The Service, including app design, branding, software, databases, and features, is owned by or licensed to Motobomb.
             Except as permitted by law, you may not copy, modify, distribute, reverse engineer, or create derivative works from the Service.
         </p>
     </section>
@@ -267,13 +287,13 @@
     <section class="card">
         <h2>Limitation of Liability</h2>
         <p>
-            To the maximum extent permitted by law, Fotobomb will not be liable for: (a) indirect, special, incidental, punitive or consequential losses;
+            To the maximum extent permitted by law, Motobomb will not be liable for: (a) indirect, special, incidental, punitive or consequential losses;
             (b) loss of profits, revenue, data, goodwill or business opportunity; (c) losses arising from user-generated content, third-party services,
             or your reliance on map data, directions, or listings; or (d) events outside our reasonable control.
         </p>
         <p>
             Subject to the paragraph below, our total aggregate liability to you for any claims arising out of or related to the Service in any 12-month
-            period will not exceed the greater of: (i) the amount you paid to us for the Service in that period (if any), or (ii) £50.
+            period will not exceed the greater of: (i) the amount you paid to us for the Service in that period, if any, or (ii) £50.
         </p>
         <p>
             Nothing in these Terms limits or excludes liability for death or personal injury caused by negligence, fraud or fraudulent misrepresentation,
@@ -284,8 +304,8 @@
     <section class="card">
         <h2>Indemnity</h2>
         <p>
-            You agree to indemnify and hold harmless Fotobomb and its operators from any claims, losses, liabilities, damages, costs and expenses
-            (including reasonable legal fees) arising out of or related to your misuse of the Service, your Content, your breach of these Terms,
+            You agree to indemnify and hold harmless Motobomb and its operators from any claims, losses, liabilities, damages, costs and expenses
+            including reasonable legal fees arising out of or related to your misuse of the Service, your Content, your breach of these Terms,
             or your real-world interactions and activities.
         </p>
     </section>
@@ -306,7 +326,7 @@
         <h2>Severability &amp; Entire Agreement</h2>
         <p>
             If any provision of these Terms is found unenforceable, the remaining provisions remain in full force and effect.
-            These Terms constitute the entire agreement between you and Fotobomb regarding the Service.
+            These Terms constitute the entire agreement between you and Motobomb regarding the Service.
         </p>
     </section>
 
@@ -320,8 +340,8 @@
     </section>
 
     <footer>
-        <img class="logo" src="logo_white.png" alt="Fotobomb logo">
-        <p>&copy; 2026 Fotobomb. All rights reserved.</p>
+        <img class="logo" src="logo_white.png" alt="Motobomb logo">
+        <p>&copy; 2026 Motobomb. All rights reserved.</p>
         <p class="meta">Version 2.0 • Effective: 9 Feb 2026</p>
     </footer>
 </main>
