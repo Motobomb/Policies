@@ -7,10 +7,16 @@
     <title>Terms &amp; Conditions</title>
     <style>
         :root{
-          --bg:#121212; --surface:#2A2A2A; --text:#FFFFFF;
-          --muted:rgba(255,255,255,.80); --divider:rgba(255,255,255,.2);
-          --stroke:rgba(255,255,255,.15); --btn:#000000; --btn-text:#FFFFFF;
-          --radius:16px; --shadow:0 8px 24px rgba(0,0,0,.35);
+          --bg:#121212;
+          --surface:#2A2A2A;
+          --text:#FFFFFF;
+          --muted:rgba(255,255,255,.80);
+          --divider:rgba(255,255,255,.2);
+          --stroke:rgba(255,255,255,.15);
+          --btn:#000000;
+          --btn-text:#FFFFFF;
+          --radius:16px;
+          --shadow:0 8px 24px rgba(0,0,0,.35);
         }
         @media (prefers-color-scheme: light){ :root{ color-scheme: dark; } }
         *{box-sizing:border-box}
