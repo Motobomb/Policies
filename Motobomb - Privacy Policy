@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Motobomb Privacy Policy explaining how we collect, use, and protect your personal data in compliance with UK GDPR and EU GDPR where applicable." />
+    <meta name="description" content="Motobomb Privacy Policy explaining account, profile, community content, reports, location and subscription data." />
     <title>Privacy Policy</title>
     <style>
         :root{
           --bg:#121212;
           --surface:#2A2A2A;
+          --surface2:#212121;
           --text:#FFFFFF;
           --muted:rgba(255,255,255,.80);
+          --muted2:rgba(255,255,255,.64);
           --divider:rgba(255,255,255,.2);
           --stroke:rgba(255,255,255,.15);
-          --btn:#000000;
-          --btn-text:#FFFFFF;
-          --radius:16px;
+          --teal:#018786;
+          --red:#810303;
+          --black:#000000;
+          --radius:18px;
           --shadow:0 8px 24px rgba(0,0,0,.35);
         }
         @media (prefers-color-scheme: light){ :root{ color-scheme: dark; } }
@@ -27,10 +30,10 @@
           background:var(--bg); color:var(--text);
           -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
         }
-        .container{ max-width:860px; margin:0 auto; padding:24px; }
+        .container{ max-width:900px; margin:0 auto; padding:24px; }
         header, main, footer{display:block}
         .page-title{
-          font-size:clamp(1.6rem, 2.2vw + 1rem, 2.25rem);
+          font-size:clamp(1.65rem, 2.2vw + 1rem, 2.35rem);
           line-height:1.25; margin:8px 0 12px; letter-spacing:.2px;
         }
         .lead{ color:var(--muted); margin:0 0 22px; }
@@ -38,6 +41,12 @@
           background:var(--surface); border:1px solid var(--stroke);
           box-shadow:var(--shadow); border-radius:var(--radius);
           padding:20px; margin:16px 0;
+        }
+        .hero{
+          background:linear-gradient(180deg, rgba(1,135,134,.24), var(--surface));
+          border:1px solid var(--stroke);
+          box-shadow:var(--shadow); border-radius:26px;
+          padding:22px; margin:16px 0 18px;
         }
         h2,h3{ margin:0 0 12px; line-height:1.35; }
         h2{font-size:1.25rem}
@@ -55,256 +64,208 @@
           border-top:1px solid var(--divider);
           margin-top:24px;padding:18px 0 8px; font-size:.95rem;
         }
-        .meta{color:var(--muted);font-size:.95rem}
-        .pill{
+        .meta{color:var(--muted2);font-size:.95rem}
+        .pill, .chip{
           display:inline-block; padding:6px 10px; border-radius:999px;
           background:rgba(255,255,255,.08); border:1px solid var(--stroke);
-          color:var(--muted); font-size:.9rem;
+          color:var(--muted); font-size:.9rem; margin:2px 2px;
         }
-        .chip{
-          display:inline-block; padding:3px 10px; border-radius:999px;
-          background:rgba(255,255,255,.10); border:1px solid var(--stroke);
-          font-size:.88rem; margin:2px 2px;
-        }
-        .badge-pro{
+        .badge-pro, .badge-free, .badge-admin, .badge-community{
           display:inline-block; padding:2px 8px; border-radius:999px;
-          background:rgba(220,30,30,.22); border:1px solid rgba(220,30,30,.5);
-          color:#fca5a5; font-size:.8rem; font-weight:600;
-          margin-left:6px; vertical-align:middle;
+          font-size:.8rem; font-weight:700; margin-left:6px; vertical-align:middle;
         }
-        .badge-free{
-          display:inline-block; padding:2px 8px; border-radius:999px;
-          background:rgba(255,255,255,.10); border:1px solid var(--stroke);
-          color:var(--muted); font-size:.8rem; font-weight:600;
-          margin-left:6px; vertical-align:middle;
+        .badge-pro{background:rgba(129,3,3,.34);border:1px solid rgba(255,255,255,.14);color:#fca5a5}
+        .badge-free{background:rgba(255,255,255,.10);border:1px solid var(--stroke);color:var(--muted)}
+        .badge-admin{background:rgba(1,135,134,.28);border:1px solid rgba(1,135,134,.6);color:#a7f3d0}
+        .badge-community{background:rgba(1,135,134,.20);border:1px solid rgba(1,135,134,.45);color:#d1fae5}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:14px 0}
+        .mini{
+          background:var(--surface2);border:1px solid var(--stroke);
+          border-radius:16px;padding:14px;
         }
+        .mini h3{color:var(--text);margin-bottom:6px}
         .row{display:flex;gap:14px;align-items:center;margin:12px 0}
         .row img{width:44px;height:auto;border-radius:8px;border:1px solid var(--stroke)}
         .row p{margin:0;color:var(--muted)}
+        .notice{
+          background:rgba(129,3,3,.24);
+          border:1px solid rgba(255,255,255,.14);
+          border-radius:16px; padding:14px;
+        }
+        strong{font-weight:700}
         @media (prefers-reduced-motion: reduce){ *{transition:none} }
     </style>
     <meta name="theme-color" content="#121212">
 </head>
 <body>
 <main class="container" role="main">
-    <header>
+    <header class="hero">
         <h1 class="page-title">Privacy Policy</h1>
-        <p class="lead">
-            We respect your privacy. This policy explains what we collect, how we use it, and your choices under the UK GDPR and the Data Protection Act 2018.
-            Where EU law applies, for example if you are in the EEA, this policy is also intended to meet EU GDPR requirements.
-        </p>
-        <p class="meta">Effective: 9 Feb 2026 • Version 2.0</p>
+        <p class="lead">This policy explains what personal data Motobomb collects, how we use it, and your choices under UK GDPR and the Data Protection Act 2018. Where EU law applies, it is also intended to meet EU GDPR requirements.</p>
+        <p class="meta">Effective: 2 June 2026 • Version 3.0</p>
     </header>
 
     <section class="card">
-        <h2>Who We Are (Data Controller)</h2>
-        <p>
-            Motobomb is operated from Wales, United Kingdom. For the purposes of the UK GDPR and the Data Protection Act 2018,
-            the Motobomb operator(s) are the data controller responsible for your personal data.
-        </p>
-        <p class="meta">Contact: use the in-app support section or email contact.motobomb@gmail.com.</p>
+        <h2>Who we are</h2>
+        <p>Motobomb is operated by <strong>Motobomb Ltd</strong>, United Kingdom. For data protection purposes, Motobomb Ltd is the data controller responsible for your personal data.</p>
+        <p class="meta">Contact: use the in-app Help & Support section or email <a href="mailto:contact.motobomb@gmail.com">contact.motobomb@gmail.com</a>.</p>
     </section>
 
     <section class="card">
-        <h2>Information We Collect</h2>
-
-        <h3>Account &amp; profile information</h3>
+        <h2>Information we collect</h2>
+        <h3>Account, sign-in and profile information</h3>
         <ul>
-            <li>Name, email address, and authentication identifiers provided via Google Sign-In, including display name, email, and Google profile photo URL</li>
-            <li>Profile details you choose to provide, such as display name, business name, social links, and profile type</li>
-            <li>Content you upload, including photos, descriptions, and location listings</li>
+            <li>When you sign in with Google, we may receive your Google account identifier and basic profile information you authorise, such as name, email address and profile picture.</li>
+            <li>When you sign in with Apple, we may receive your Apple user identifier and any name or email address you choose to share. Apple may provide a private relay email address instead of your real email address if you use Hide My Email/private relay.</li>
+            <li>We store your sign-in provider, authentication identifier and account status so you can access your account securely across sessions.</li>
+            <li>Profile type, display name, profile image, account setup status and legal acceptance version.</li>
+            <li>For photographers: business name, social links, website, tags, portfolio photos, approximate area, travel radius, list visibility and Pro status.</li>
+            <li>For community profiles: display name, profile image, contribution history and contribution allowance information.</li>
         </ul>
 
-        <h3>Profile images and portfolio photos</h3>
-        <p>
-            If you upload a profile photo or portfolio images for Photographer accounts, these are stored in Firebase Storage under your account's unique identifier.
-            Profile images are publicly accessible as part of your photographer profile. Portfolio images are displayed to other users within the app.
-            Images are deleted from storage when you remove them from your profile, downgrade your account, or delete your account.
-        </p>
+        <h3>Photos, notes, reports and recommendations</h3>
+        <ul>
+            <li>Photos, notes, descriptions and location details you submit as recommendations or community contributions.</li>
+            <li>Report details you submit about locations, photographer profiles or community content.</li>
+            <li>Admin review status and moderation outcomes, such as approved, rejected, resolved or hidden.</li>
+            <li>Attribution data used with approved community content, such as your display name and profile image.</li>
+        </ul>
 
         <h3>Location data</h3>
-        <p>
-            Location is used to provide map features and nearby functionality while the app is in use.
-            If you enable background location, location may be processed in the background to support features such as alerts.
-            You can control permissions at any time in your device settings.
-        </p>
-        <p>
-            <strong>Photographer location sharing:</strong> If you are a Pro Photographer and enable "Appear on Map", your approximate current location
-            (latitude and longitude) is stored in our database and displayed publicly on the map to other app users.
-            This data is removed when you stop sharing, when sharing auto-disables after 8 hours, or when you downgrade or delete your account.
-            We do not store a continuous history of your movements — only your most recent shared position while sharing is active.
-        </p>
-        <p>
-            <strong>Photographer approximate area:</strong> If you set an approximate public area in your profile, a rounded location used for
-            "Near Me" filtering, this is stored as part of your public profile and is visible to other users. It is less precise than your
-            live shared location and is intended only to indicate the general area you operate in.
-        </p>
-        <p class="meta">We do not aim to store a continuous location history of your movements beyond what is described above.</p>
+        <p>Location is used for map features, nearby functionality, directions and photographer location sharing where enabled. You can manage permissions in device settings.</p>
+        <p><strong>Pro Photographer live sharing:</strong> if you enable Appear on Map, your current shared position is displayed to signed-in users while sharing is active. Sharing stops when you turn it off or when the auto-disable safeguard triggers after 8 hours. We do not aim to store a continuous movement history.</p>
+        <p><strong>Approximate area:</strong> Pro photographers may save an approximate public area and rounded location information for discovery and Near Me filtering.</p>
 
-        <h3>Motobomb log data</h3>
-        <p>
-            When you log a Motobomb, a record of a pass captured by a roadside photographer, the entry may include the photographer's name or
-            business name and the date of the pass. This constitutes personal data about a third party. You should only log accurate information
-            and must not use the log to harass or track individuals. See our Terms &amp; Conditions for more detail.
-        </p>
+        <h3>Subscriptions and purchases</h3>
+        <p>Subscriptions and purchases may be processed by Google Play for Android or by Apple through the Apple App Store / StoreKit for iOS. We receive the purchase, receipt, transaction, subscription status and entitlement information needed to provide features such as Enthusiast Pro, Photographer Pro, ad removal and subscription status. We do not receive your full payment card details from Google Play or Apple.</p>
+        <p>Purchase and subscription data may include product ID, purchase token or receipt identifier, transaction/reference ID, subscription state, renewal/cancellation information, refund/reversal status, platform, country/currency where provided, and timestamps needed to verify access.</p>
 
-        <h3>Purchase information</h3>
-        <p>
-            Purchases and subscriptions are processed by Google Play. We receive entitlement and transaction verification data needed
-            to provide purchases, for example whether a Pro subscription or ad removal is active, and the purchase token used to verify
-            the subscription against Google Play. We do not receive your full payment card details.
-        </p>
-
-        <h3>Device, usage &amp; diagnostics</h3>
+        <h3>Device, usage and diagnostics</h3>
         <ul>
-            <li>Device information, including model, OS version, app version, and language</li>
-            <li>App activity/usage data and performance diagnostics</li>
-            <li>Log and crash data to help fix bugs and improve reliability</li>
+            <li>Device model, OS version, app version, language and basic diagnostics.</li>
+            <li>Crash logs and performance information to help fix bugs and improve reliability.</li>
+            <li>Usage events needed to operate, secure and improve the app.</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>Permissions the App Uses</h2>
+        <h2>How we use your data</h2>
         <ul>
-            <li><strong>Location (fine/coarse, foreground/background):</strong> map features, proximity/nearby functions, and photographer location sharing</li>
-            <li><strong>Notifications:</strong> service alerts, location sharing reminders, auto-disable notifications, and updates where enabled</li>
-            <li><strong>Foreground service:</strong> to run essential background tasks where needed</li>
-            <li><strong>Internet:</strong> authentication, maps, syncing, subscriptions, ads</li>
-            <li><strong>Photos/Media/Storage:</strong> to upload or save media you choose to share, including profile photos and portfolio images</li>
-        </ul>
-        <p class="meta">You can manage or revoke permissions at any time via device settings or from Menu → Settings within the app.</p>
-    </section>
-
-    <section class="card">
-        <h2>How We Use Your Data</h2>
-        <ul>
-            <li>Provide the Service, including accounts, profiles, maps, listings, and uploads</li>
-            <li>Enable location-based features, including Photographer location sharing when you choose to enable it</li>
-            <li>Verify and manage subscriptions/entitlements, such as Pro Photographer badge and ad removal, with entitlements re-verified against Google Play on each app session</li>
-            <li>Display ads, unless removed, and measure ad performance</li>
-            <li>Maintain security, prevent fraud/abuse, and enforce our Terms</li>
-            <li>Improve performance, reliability, and user experience</li>
-            <li>Send essential service messages such as location sharing reminders and auto-disable notifications, and marketing only where you have consented if applicable</li>
-        </ul>
-
-        <h3>Legal bases for processing</h3>
-        <ul>
-            <li><strong>Contract:</strong> to provide the Service you request, including account, features, and subscriptions</li>
-            <li><strong>Consent:</strong> for optional features like location sharing and notifications, which you can withdraw any time</li>
-            <li><strong>Legitimate interests:</strong> service security, fraud prevention, and analytics to improve performance, balanced against your rights</li>
-            <li><strong>Legal obligation:</strong> where we must retain certain records, such as accounting or tax records</li>
+            <li>Provide accounts, profiles, maps, lists, favourites, community content, reports and support.</li>
+            <li>Show public photographer profiles and approved community content with appropriate attribution.</li>
+            <li>Review recommendations, reports and community submissions.</li>
+            <li>Operate contribution limits, contribution history and the Community Leaderboard.</li>
+            <li>Verify and manage subscriptions, purchases and entitlements from Google Play, the Apple App Store / StoreKit or another relevant platform.</li>
+            <li>Send essential service notifications such as location sharing reminders and auto-disable notices.</li>
+            <li>Keep the service safe, prevent abuse, enforce our Terms and investigate reports.</li>
+            <li>Improve performance, reliability and user experience.</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>Advertising, Analytics &amp; Third Parties</h2>
-        <p>We use third-party service providers to operate the app. Depending on your settings, these providers may process personal data on our behalf:</p>
+        <h2>Legal bases for processing</h2>
         <ul>
-            <li><strong>Google Firebase</strong> for authentication, Firestore database, Firebase Storage for images, analytics, and crash reporting</li>
-            <li><strong>Google Sign-In</strong> for sign-in via your Google account, where we receive your Google display name, email, and profile photo URL</li>
-            <li><strong>Google Maps</strong> for map display and related features</li>
-            <li><strong>Google Play Billing</strong> for subscriptions and purchase processing</li>
-            <li><strong>Google AdMob</strong> for advertising, unless removed</li>
-        </ul>
-        <p class="meta">
-            You can control ad personalisation via your device settings or Google account settings. If you disable personalisation,
-            you may still see non-personalised ads. We do not knowingly serve personalised ads to children under 13.
-        </p>
-    </section>
-
-    <section class="card">
-        <h2>Publicly Visible Data</h2>
-        <p>The following data is visible to other users of the app:</p>
-        <ul>
-            <li><strong>Photographer profiles:</strong> business name, social links, profile photo, portfolio images, vehicle type tags, style tags, verified status, and for Pro users, website and approximate area</li>
-            <li><strong>Live location (Pro Photographers only):</strong> approximate latitude and longitude while sharing is enabled</li>
-            <li><strong>Recommended places:</strong> location names and coordinates submitted via the Recommend a Place feature</li>
-        </ul>
-        <p>Enthusiast accounts do not have a public profile and their data is not visible to other users beyond standard app functionality.</p>
-    </section>
-
-    <section class="card">
-        <h2>Sharing of Data</h2>
-        <p>We may share data:</p>
-        <ul>
-            <li>With service providers who help us run the app, as described above</li>
-            <li>If required by law, court order, or to respond to valid legal process</li>
-            <li>To protect rights, safety, and security of users, the public, or the Service</li>
-            <li>In connection with a reorganisation, sale, or transfer of the Service, subject to appropriate safeguards</li>
+            <li><strong>Contract:</strong> to provide the app, account features, profiles, subscriptions and community features you request.</li>
+            <li><strong>Consent:</strong> for optional permissions such as location sharing, notifications and photo/media access where required.</li>
+            <li><strong>Legitimate interests:</strong> service security, abuse prevention, moderation, diagnostics and product improvement, balanced against your rights.</li>
+            <li><strong>Legal obligation:</strong> where we must retain certain records, such as accounting or tax information.</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>Data Retention &amp; Deletion</h2>
-        <p>We keep personal data only as long as necessary to provide the Service and for legitimate business or legal purposes. Specific retention points:</p>
+        <h2>Publicly visible information</h2>
         <ul>
-            <li><strong>Live location data:</strong> stored only while location sharing is active. Deleted immediately when you stop sharing, when the 8-hour auto-disable fires, or when you downgrade or delete your account.</li>
-            <li><strong>Profile and portfolio images:</strong> stored in Firebase Storage while your account is active. Deleted when you remove them from your profile, downgrade to a tier that doesn't include them, or delete your account.</li>
-            <li><strong>Account data:</strong> deleted on account deletion, which removes your Firestore public profile, private account document, Firebase Storage files, and Firebase Authentication record.</li>
-            <li><strong>Residual data:</strong> some data, such as crash logs or anonymised analytics, may be retained for a limited period after account deletion for legal, security, or diagnostic purposes.</li>
+            <li><strong>Photographer profiles:</strong> business name, profile image, socials, portfolio photos, tags, Pro badge, website, approximate area and travel radius where provided.</li>
+            <li><strong>Live photographer location:</strong> shared location while Appear on Map is active.</li>
+            <li><strong>Community content:</strong> approved photos, notes and updates may be visible to other signed-in users and may include your display name and profile image.</li>
+            <li><strong>Leaderboard:</strong> your display name, profile image and approved contribution count may appear if you have qualifying approved contributions.</li>
+            <li><strong>Recommended places:</strong> submitted location names, coordinates, descriptions, access information and images may become visible if approved.</li>
         </ul>
-        <p>You can delete your account at any time from <strong>Menu → Settings → Delete Account</strong>.</p>
     </section>
 
     <section class="card">
-        <h2>International Transfers</h2>
-        <p>
-            Some of our service providers may process data outside the UK and outside the EEA.
-            Where this happens, we use appropriate safeguards such as the UK International Data Transfer Agreement
-            or Standard Contractual Clauses, as applicable.
-        </p>
+        <h2>Reports, moderation and admin review</h2>
+        <p>Reports about locations, photographer profiles and community content are sent to Motobomb admin review. Reports may include the reported item, reason, notes, reporter information and relevant profile/location details. Reports are usually used for moderation and may not receive a direct reply.</p>
+        <p>Use Help & Support for account help, deletion requests or anything that requires a direct response.</p>
     </section>
 
     <section class="card">
-        <h2>Security</h2>
-        <p>
-            We use appropriate technical and organisational measures to protect personal data, including Firebase Authentication
-            token verification on each session, Firestore security rules that restrict data access to the account owner,
-            and server-side verification of subscription entitlements via Cloud Functions.
-            However, no method of transmission or storage is completely secure and we cannot guarantee absolute security.
-        </p>
-    </section>
-
-    <section class="card">
-        <h2>Your Rights</h2>
-        <p>Under UK GDPR and EU GDPR where applicable, you may have the right to:</p>
+        <h2>Permissions the app uses</h2>
         <ul>
-            <li>Request access to your personal data</li>
-            <li>Request correction of inaccurate or incomplete data</li>
-            <li>Request deletion of your data, also available directly via Settings → Delete Account in the app</li>
-            <li>Request restriction of processing</li>
-            <li>Object to processing, including processing based on legitimate interests</li>
-            <li>Request data portability in certain circumstances</li>
-            <li>Withdraw consent at any time where we rely on consent, for example by disabling location sharing or revoking permissions in device settings</li>
+            <li><strong>Location:</strong> map features, Near Me, location sharing and proximity alerts.</li>
+            <li><strong>Notifications:</strong> service alerts, sharing reminders, auto-disable notices and optional updates.</li>
+            <li><strong>Photos/Media:</strong> profile images, portfolio images and community contribution images you choose to upload.</li>
+            <li><strong>Internet:</strong> authentication, maps, syncing, subscriptions, ads, app-store entitlement checks and support.</li>
+            <li><strong>Foreground/background services:</strong> to support essential location-sharing or notification behaviour where enabled.</li>
         </ul>
-        <p>
-            To exercise your rights, contact us via in-app support or at contact.motobomb@gmail.com.
-            You also have the right to lodge a complaint with the
-            Information Commissioner's Office (ICO) if you believe your data rights have been infringed.
-        </p>
     </section>
 
     <section class="card">
-        <h2>Children's Privacy</h2>
-        <p>
-            Users under 13 require parent/guardian consent. We do not knowingly collect personal data from children under 13 without such consent.
-            We do not knowingly serve personalised ads to children under 13.
-            If we learn we have collected data without appropriate consent, we will take steps to delete it.
-        </p>
+        <h2>Third-party services</h2>
+        <ul>
+            <li><strong>Google Firebase:</strong> authentication, Firestore database, Firebase Storage, diagnostics and cloud services.</li>
+            <li><strong>Google Sign-In:</strong> sign-in and basic account information where you choose to sign in with Google, such as your name, email address and profile picture where authorised.</li>
+            <li><strong>Sign in with Apple:</strong> sign-in and basic account information where you choose to sign in with Apple, including your Apple user identifier and any name/email details you choose to share, which may include a private relay email address.</li>
+            <li><strong>Google Maps:</strong> map display, directions and related location features.</li>
+            <li><strong>Google Play Billing:</strong> Android subscriptions, in-app purchases, purchase verification, subscription status and refund/reversal signals.</li>
+            <li><strong>Apple App Store / StoreKit:</strong> iOS subscriptions, in-app purchases, receipt/transaction verification, subscription status and refund/reversal signals.</li>
+            <li><strong>Google AdMob:</strong> advertising unless removed or otherwise unavailable.</li>
+            <li><strong>Apple and Google platform services:</strong> app distribution, updates, purchase management, crash or device-level diagnostics and security checks where applicable.</li>
+        </ul>
+        <p class="meta">Third-party services process data under their own terms and privacy policies where applicable.</p>
     </section>
 
     <section class="card">
-        <h2>Changes to This Policy</h2>
-        <p>
-            We may update this Privacy Policy from time to time. We will provide notice of material changes within the app or by other reasonable means.
-            The "Effective" date above shows when this policy was last updated.
-        </p>
+        <h2>App stores, platforms and website use</h2>
+        <p>Motobomb uses one shared Privacy Policy for the Android app, iOS app and website. The exact data processed may depend on how you access the service.</p>
+        <ul>
+            <li>If you use Android, Google Play and Google platform services may process purchase, subscription, refund, device, diagnostic and app-install information under Google's own terms and privacy policies.</li>
+            <li>If you use iOS, Apple, Sign in with Apple, App Store and StoreKit services may process sign-in, purchase, subscription, refund, device, diagnostic and app-install information under Apple's own terms and privacy policies.</li>
+            <li>If you use the website, we may process basic technical information such as browser/device information, page requests and security logs.</li>
+            <li>Platform providers may give Motobomb limited sign-in, entitlement, subscription, transaction, refund/reversal or diagnostic information needed to operate the service, but they do not provide us with your full payment card details.</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Data retention and deletion</h2>
+        <ul>
+            <li><strong>Account/profile data:</strong> kept while your account is active and deleted or anonymised when your account is deleted, subject to legal or security needs. Some sign-in identifiers may remain in security, deletion or audit records where necessary.</li>
+            <li><strong>Profile and portfolio images:</strong> stored while active and removed when deleted from your profile or when your account is deleted.</li>
+            <li><strong>Community content:</strong> approved content may remain visible until removed, hidden or deleted. If your account is deleted, we may remove or anonymise attribution where reasonably possible.</li>
+            <li><strong>Reports and moderation records:</strong> may be retained to protect the service, investigate abuse and evidence moderation decisions.</li>
+            <li><strong>Live location sharing:</strong> stored only while sharing is active and removed when sharing ends or auto-disables.</li>
+            <li><strong>Purchase and entitlement records:</strong> retained as needed to provide paid features, process account support, prevent fraud, handle disputes and meet legal/accounting requirements.</li>
+            <li><strong>Diagnostics:</strong> crash logs and anonymised/aggregated analytics may be retained for a limited period.</li>
+        </ul>
+        <p>You can delete your account from <strong>Menu → Settings → Delete Account</strong>.</p>
+    </section>
+
+    <section class="card">
+        <h2>International transfers and security</h2>
+        <p>Some providers may process data outside the UK or EEA. Where required, we rely on appropriate safeguards such as standard contractual clauses or equivalent mechanisms.</p>
+        <p>We use technical and organisational measures such as Firebase Authentication, Firestore/Storage rules, entitlement checks and restricted admin access. No system is completely secure, so we cannot guarantee absolute security.</p>
+    </section>
+
+    <section class="card">
+        <h2>Your rights</h2>
+        <p>Under UK GDPR and EU GDPR where applicable, you may have rights to access, correct, delete, restrict, object to processing, request portability and withdraw consent where we rely on consent.</p>
+        <p>To exercise your rights, contact us via Help & Support or email <a href="mailto:contact.motobomb@gmail.com">contact.motobomb@gmail.com</a>. You also have the right to complain to the Information Commissioner's Office (ICO).</p>
+    </section>
+
+    <section class="card">
+        <h2>Children's privacy</h2>
+        <p>Users under 13 require parent or guardian consent. We do not knowingly collect personal data from children under 13 without appropriate consent and do not knowingly serve personalised ads to children under 13.</p>
+    </section>
+
+    <section class="card">
+        <h2>Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. Material updates may be shown in the app and may require you to accept the new version before continuing.</p>
     </section>
 
     <footer>
         <img class="logo" src="logo_white.png" alt="Motobomb logo">
-        <p>&copy; 2026 Motobomb. All rights reserved.</p>
-        <p class="meta">Version 2.0 • Effective: 9 Feb 2026</p>
+        <p>&copy; 2026 Motobomb Ltd. All rights reserved.</p>
+        <p class="meta">Version 3.0 • Effective: 2 June 2026</p>
     </footer>
 </main>
 </body>
